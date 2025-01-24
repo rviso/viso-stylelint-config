@@ -1,0 +1,160 @@
+// 定义变量
+@primary-color: #3498db;
+@secondary-color: #e74c3c;
+@font-size-base: 16px;
+
+// 基础样式
+body {
+  padding: 0;
+  margin: 0;
+  font-size: @font-size-base; // 使用变量
+  color: @primary-color;
+}
+
+// 标题样式
+h1 {
+  font-size: 2em;
+  color: @secondary-color;
+}
+
+// 容器样式
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: auto;
+  background-color: #f1f1f1;
+}
+
+// 按钮样式
+.button {
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: @primary-color;
+  border: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(@primary-color, 10%); // 使用函数
+  }
+}
+
+// 未使用的类
+.unused-class {
+  color: red;
+}
+
+// 不必要的 !important
+.important-usage {
+  margin: 10px !important;
+}
+
+// 嵌套选择器
+.nav {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        color: @primary-color;
+        text-decoration: none;
+
+        &:hover {
+          color: darken(@primary-color, 20%); // 使用函数
+        }
+      }
+    }
+  }
+}
+
+// 混合
+.mixin-example() {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid @secondary-color;
+}
+
+.box {
+  .mixin-example(); // 调用混合
+
+  background-color: @secondary-color;
+}
+
+// 媒体查询
+@media (width >= 768px) {
+  .container {
+    padding: 40px;
+  }
+
+  .button {
+    font-size: 1.2em;
+  }
+}
+
+// 扩展
+.error {
+  color: red;
+  border: 1px solid red;
+}
+
+.warning {
+  color: orange;
+  border-color: orange;
+  &:extend(.error); // 扩展
+}
+
+// 伪类和伪元素
+::before {
+  color: @primary-color;
+  content: "Before";
+}
+
+::after {
+  color: @secondary-color;
+  content: "After";
+}
+
+// 命名空间
+:global(.global-class) {
+  color: green;
+}
+
+// 导入
+@import "variables.less"; // 导入外部文件
+
+// 注释
+
+/* 这是一个块注释 */
+// 这是一个单行注释
+
+
+.opt() {
+  /* stylelint-disable-next-line function-no-unknown */
+  .custom_function(@push-primary-colors);
+  .custom_function(@push-primary-colors);
+
+  &:hover:not(&-in-view),
+  &:hover:not(&-selected):not(&-range-start):not(&-range-end):not( &-range-hover-start):not(&-range-hover-end) {
+    .@{cellClassName} {
+      background: @picker-basic-cell-hover-bg-color;
+    }
+  }
+
+}
+
+
+.declaration-block-no-redundant-longhand-properties {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+}

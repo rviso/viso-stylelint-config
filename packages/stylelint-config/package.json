@@ -1,55 +1,58 @@
 {
   "name": "@viso/stylelint-config",
-  "version": "0.1.0",
+  "version": "0.3.9",
   "description": "stylelint config",
-  "main": "index.js",
-  "scripts": {
-    "lerna-publish": "lerna publish --force-publish --no-private"
-  },
+  "author": "lingann",
+  "license": "ISC",
+  "homepage": "https://github.com/rviso/viso-stylelint-config#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rviso/viso-stylelint-config.git"
   },
-  "keywords": [
-    "stylelint",
-    "css",
-    "scss"
-  ],
-  "files": [
-    "index.js",
-    "README.md"
-  ],
-  "author": "lingann",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rviso/viso-stylelint-config/issues"
   },
-  "homepage": "https://github.com/rviso/viso-stylelint-config#readme",
+  "keywords": [
+    "stylelint",
+    "css",
+    "scss",
+    "less"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "libs",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "peerDependencies": {
+    "postcss": ">=8.5.1",
     "prettier": ">=3.4.2",
     "stylelint": ">=16.13.2"
   },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
   "dependencies": {
-    "postcss": "^8.5.1",
+    "@stylistic/stylelint-plugin": "^3.1.1",
     "postcss-html": "^1.8.0",
     "postcss-less": "^6.0.0",
     "postcss-scss": "^4.0.9",
     "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-recommended": "^15.0.0",
     "stylelint-config-standard": "^37.0.0",
+    "stylelint-config-standard-less": "^3.0.1",
     "stylelint-config-standard-scss": "^14.0.0",
-    "stylelint-config-standard-vue": "^1.0.0",
     "stylelint-order": "^6.0.4",
-    "stylelint-prettier": "^5.0.2"
+    "stylelint-scss": "^6.10.1"
   },
   "devDependencies": {
-    "@viso/eslint-config": "^0.3.7",
-    "@viso/stylelint-config": "workspace:^",
-    "eslint": "^8.57.1",
-    "lerna": "^8.1.9",
-    "postcss": "^8.5.1",
     "prettier": "^3.4.2",
     "sass": "1.83.4",
     "stylelint": "^16.13.2"
-  }
+  },
+  "gitHead": "2ca59638ad6a824514b5641d45acd60ae207e731"
 }
