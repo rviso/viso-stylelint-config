@@ -2,29 +2,29 @@
   "name": "@viso/stylelint-config",
   "version": "0.1.0",
   "description": "stylelint config",
-  "main": "index.js",
-  "scripts": {
-    "lerna-publish": "lerna publish --force-publish --no-private"
-  },
+  "author": "lingann",
+  "license": "MIT",
+  "homepage": "https://github.com/rviso/viso-stylelint-config#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rviso/viso-stylelint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rviso/viso-stylelint-config/issues"
   },
   "keywords": [
     "stylelint",
     "css",
     "scss"
   ],
+  "main": "index.js",
   "files": [
     "index.js",
     "README.md"
   ],
-  "author": "lingann",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rviso/viso-stylelint-config/issues"
+  "scripts": {
+    "lerna-publish": "lerna publish --force-publish --no-private"
   },
-  "homepage": "https://github.com/rviso/viso-stylelint-config#readme",
   "peerDependencies": {
     "prettier": ">=3.4.2",
     "stylelint": ">=16.13.2"
