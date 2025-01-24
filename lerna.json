@@ -4,12 +4,12 @@
   "packages": ["packages/*"],
   "command": {
     "publish": {
-      "allowBranch": ["master", "release"],
+      "allowBranch": ["main", "release"],
       "message": "chore(release): publish %s",
       "registry": "https://registry.npmjs.org/"
     },
     "version": {
-      "allowBranch": ["master", "release"]
+      "allowBranch": ["main", "release"]
     }
   },
   "$schema": "node_modules/lerna/schemas/lerna-schema.json"
